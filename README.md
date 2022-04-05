@@ -41,29 +41,50 @@ Pins PA13 and PA14 are readily available, they can be accessed by connecting UAR
 
 The correct pin/resistor pairing below can be used as a reference during soldering:
 
-**
+
 PA5 - R12
+
+
 PA7 - R80
+
+
 PA14 - top middle SPI pin
-PA13 - bottom middle SPI pin**
+
+
+PA13 - bottom middle SPI pin
+
+
 
 All the UART pins of the stepper drivers lead to resistors, these can be soldered on the driver facing side of the resistor below each driver.
 
 The resistors paired with the UART pins on the drivers are shown on the table below:
 
-**
+
 X-driver - R14
+
+
 Y-driver - R15
+
+
 Z-driver - R16
-E-driver - R17**
+
+
+E-driver - R17
 
 After soldering, the only four connections to be made are the following:
 
-**R14 - R12
+R14 - R12
+
+
 R15 - R80
+
+
 R16 - SWDIO (bottom middle SPI pin)
+
+
 R17 - SWCLK (top middle SPI pin)
-**
+
+
 
 The picture below shows the whole layout and the resistors/SPI pins used for soldering the UART wires.
 Note that only the four thick lines going from the drivers to the resistors are soldered wires, the rest is for reference to show
