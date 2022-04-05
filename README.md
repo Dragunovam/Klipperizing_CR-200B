@@ -26,3 +26,48 @@ By Adding the sensing probe, the Z-endstop on top of the printer is no longer ne
 
 ### After removal the endstop screw comes out with a spring along its shaft. The z-endstop is simply disabled by unplugging the cable.
 ![z-endstop and endstop screw](https://user-images.githubusercontent.com/20616914/161829822-e1d0537e-df85-47f6-b7ab-90986407f791.jpg)
+
+## Pinout for the UART mode
+
+After carefully probing the pins on the STM32F103 chip and the rest of the mainboard, I was able to find multiple free pins of the stepper drivers.
+The picture below shows the free pins. Before soldering one should carefully check the orientation of the chip and its starting pin (position 1). On the creality motherboards this is indicated by a dot on the chip itself and in my case also a dot on the solder mask next to pin 1. 
+
+### Pinout for UART mode
+![STM32F103-LQFP64-pins](https://user-images.githubusercontent.com/20616914/161830997-ddd43968-76f7-4991-9dc7-55eb1e67ffde.png)
+
+Due to the removal of the cable from the z-endstop, pin PA5 is no longer in use. It is now possible to connect a UART wire on the chip-facing resistor right next to the Z-endstop connector slot. Even though the resistors are pretty small, it makes the job easier and limits the risk of damaging pins or burning through the cip itself. A lost/destroyed resistor can be easilly replaces because their resistance values are properly printed on top of the resistors. One point for Creality!
+
+Pins PA13 and PA14 are readily available, they can be accessed by connecting UART wires to the two middle SPI headers. Pin PA7 goes to a resistor that leads to two unused ports in the bottom right of the board.
+
+The correct pin/resistor pairing below can be used as a reference during soldering:
+
+**
+PA5 - R12
+PA7 - R80
+PA14 - top middle SPI pin
+PA13 - bottom middle SPI pin**
+
+All the UART pins of the stepper drivers lead to resistors, these can be soldered on the driver facing side of the resistor below each driver.
+
+The resistors paired with the UART pins on the drivers are shown on the table below:
+
+**
+X-driver - R14
+Y-driver - R15
+Z-driver - R16
+E-driver - R17**
+
+After soldering, the only four connections to be made are the following:
+
+**R14 - R12
+R15 - R80
+R16 - SWDIO (bottom middle SPI pin)
+R17 - SWCLK (top middle SPI pin)
+**
+
+The picture below shows the whole layout and the resistors/SPI pins used for soldering the UART wires.
+Note that only the four thick lines going from the drivers to the resistors are soldered wires, the rest is for reference to show
+the relationship between the individual pins on the STM32 and the resistors on the board.
+
+
+![Creality-3D-CR-200B-Motherboard-6001020019-26049_1](https://user-images.githubusercontent.com/20616914/161835029-f55db45b-2538-4e0e-9ad6-cc43e4505a0c.png)
