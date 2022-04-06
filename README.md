@@ -93,4 +93,5 @@ Note that only the four thick lines going from the drivers to the resistors are 
 the relationship between the individual pins on the STM32 and the resistors on the board.
 
 
-![Creality-3D-CR-200B-Motherboard-6001020019-26049_1](https://user-images.githubusercontent.com/20616914/161835029-f55db45b-2538-4e0e-9ad6-cc43e4505a0c.png)
+
+![Creality-3D-CR-200B-Motherboard-6001020019-26049_1](https://user-images.githubusercontent.com/20616914/161874233-f77bd095-7d7e-4e15-824a-678be619125f.png)
