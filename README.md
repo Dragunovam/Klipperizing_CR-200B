@@ -99,3 +99,6 @@ the relationship between the individual pins on the STM32 and the resistors on t
 
 ![Creality-3D-CR-200B-Motherboard-6001020019-26049_1](https://user-images.githubusercontent.com/20616914/161874233-f77bd095-7d7e-4e15-824a-678be619125f.png)
 
+
+In the following picture an alternate route can be seen with R14->SWLCK, R15->SWDIO, R16-->R80 and R17-->R12 pairs. if this route is preferred, the pins should be changed in the printer.cfg file to the correct pin that was used to connect the stepper driver.
+![277851069_1319436831908893_1671889640108193263_n](https://user-images.githubusercontent.com/20616914/161877042-41f00396-7669-4231-aeec-30da9771a28f.jpg)
