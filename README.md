@@ -102,9 +102,18 @@ the relationship between the individual pins on the STM32 and the resistors on t
 
 
 
+
 In the following picture an alternate route can be seen with R14->SWLCK, R15->SWDIO, R16-->R80 and R17-->R12 pairs. if this route is preferred, the pins should be changed in the printer.cfg file to the correct pin that was used to connect the stepper driver.
 Only four wires are necessary for single-wire UART mode on eacht driver.
 
 
 
+
 ![277851069_1319436831908893_1671889640108193263_n](https://user-images.githubusercontent.com/20616914/161877042-41f00396-7669-4231-aeec-30da9771a28f.jpg)
+
+
+
+I can't stress enough that it's very important to check for continuity after soldering. Solder bridges with nearby resistors/capacitors are a very bad thing and will likely fry your board when it's powered up. Strong solder joints prevent the wires from breaking at the joint after excessive bending while re-attaching the board inside the printer. An easy way to solder wires onto these small resistors is pre-tin the wires excessively, gravity and capillary action will draw the excess solder from the wire onto the resistor while heating the wire attached to the resistor. This enables you to form a solder joint with the resistor by applying indirect heat on the resistor, through the wire. 
+
+A rule of thumb is to also check for continuity between the R14, R15, R16, R17 resistors and their matching pins on the STM32 chip. The pins on the chip are small, but with fine multimeter probes it's possible to probe the individual pins. I only reccommend probing the chip pins while in continuity mode.
+Bad UART connections lead to errors in klipper, the connections should be checked if this happens.
