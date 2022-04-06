@@ -53,6 +53,8 @@ PA14 - SWCLK (ISP header)
 
 PA13 - SWDIO (ISP header)
 ```
+![afbeelding](https://user-images.githubusercontent.com/20616914/161874765-587a6409-38d7-424e-95ea-aece1605b703.png)
+
 
 
 All the UART pins of the stepper drivers lead to resistors, these can be soldered on the driver facing side of the resistor below each driver.
