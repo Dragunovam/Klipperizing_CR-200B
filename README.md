@@ -104,7 +104,6 @@ the relationship between the individual pins on the STM32 and the resistors on t
 
 
 In the following picture an alternate route can be seen with R14->SWLCK, R15->SWDIO, R16-->R80 and R17-->R12 pairs. if this route is preferred, the pins should be changed in the printer.cfg file to the correct pin that was used to connect the stepper driver.
-Only four wires are necessary for single-wire UART mode on eacht driver.
 
 
 
