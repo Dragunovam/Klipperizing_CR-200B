@@ -48,10 +48,10 @@ PA5 - R12
 PA7 - R80
 
 
-PA14 - top middle ISP pin
+PA14 - SWCLK (ISP header)
 
 
-PA13 - bottom middle ISP pin
+PA13 - SWDIO (ISP header)
 ```
 
 
@@ -71,6 +71,8 @@ Z-driver - R16
 
 E-driver - R17
 ```
+![afbeelding](https://user-images.githubusercontent.com/20616914/161874573-c10fd789-f07f-4d8d-8eff-fb9a815f84a1.png)
+
 
 After soldering, the only four connections to be made are the following:
 
@@ -81,12 +83,11 @@ R14 - R12
 R15 - R80
 
 
-R16 - SWDIO (bottom middle ISP pin)
+R16 - SWDIO (ISP header)
 
 
-R17 - SWCLK (top middle ISP pin)
+R17 - SWCLK (ISP HEADER)
 ```
-
 
 The picture below shows the whole layout and the resistors/ISP pins used for soldering the UART wires.
 Note that only the four thick lines going from the drivers to the resistors are soldered wires, the rest is for reference to show
@@ -95,3 +96,4 @@ the relationship between the individual pins on the STM32 and the resistors on t
 
 
 ![Creality-3D-CR-200B-Motherboard-6001020019-26049_1](https://user-images.githubusercontent.com/20616914/161874233-f77bd095-7d7e-4e15-824a-678be619125f.png)
+
