@@ -35,7 +35,7 @@ The picture below shows the free pins. Before soldering one should carefully che
 ### Pinout for UART mode
 ![STM32F103-LQFP64-pins](https://user-images.githubusercontent.com/20616914/161830997-ddd43968-76f7-4991-9dc7-55eb1e67ffde.png)
 
-Due to the removal of the cable from the z-endstop, pin PA5 is no longer in use. It is now possible to connect a UART wire on the chip-facing resistor right next to the Z-endstop connector slot. Even though the resistors are pretty small, it makes the job easier and limits the risk of damaging pins or burning through the cip itself. A lost/destroyed resistor can be easilly replaces because their resistance values are properly printed on top of the resistors. One point for Creality!
+Due to the removal of the cable from the z-endstop, pin PA5 is no longer in use. It is now possible to connect a UART wire on the chip-facing resistor right next to the Z-endstop connector slot. Even though the resistors are pretty small, it makes the job easier and limits the risk of damaging pins or burning through the chip itself. A lost/destroyed resistor can be easilly replaces because their resistance values are properly printed on top of the resistors. One point for Creality!
 
 Pins PA13 and PA14 are readily available, they can be accessed by connecting UART wires to the two middle SPI headers. Pin PA7 goes to a resistor that leads to two unused ports in the bottom right of the board.
 
